@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Red Rock Estate Services</title>
+  <meta name="description" content="Contact Red Rock Estate Services for estate sales, cleanouts, and junk removal in Southern Utah. Call 435-233-6029 or fill out our form for a free quote.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rust: '#B54A2D',
+            'rust-dark': '#8E3A21',
+            cream: '#E8DCCA',
+            charcoal: '#2F2F2F',
+            taupe: '#8A7F73',
+            sage: '#8FAEA3',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; color: #2F2F2F; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .nav-link { transition: color 0.2s ease; }
+    .nav-link:hover { color: #B54A2D; }
+    .btn-primary { transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .btn-primary:hover { background-color: #8E3A21; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(181,74,45,0.3); }
+    .btn-primary:active { transform: translateY(0); }
+    input, textarea { transition: border-color 0.2s ease, box-shadow 0.2s ease; }
+    input:focus, textarea:focus { outline: none; border-color: #B54A2D; box-shadow: 0 0 0 3px rgba(181,74,45,0.12); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- HEADER -->
+  <header class="bg-white sticky top-0 z-50" style="box-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="shrink-0">
+          <img src="images/logo.png" alt="Red Rock Estate Services" class="h-14 w-auto">
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="/" class="nav-link text-sm font-medium text-charcoal">Home</a>
+          <a href="/about" class="nav-link text-sm font-medium text-charcoal">About Us</a>
+          <div class="relative group">
+            <button class="nav-link text-sm font-medium text-charcoal flex items-center gap-1">
+              Services
+              <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <div class="bg-white rounded-xl py-2 w-52 border border-cream" style="box-shadow: 0 12px 40px rgba(0,0,0,0.12);">
+                <a href="/services#estate-sales" class="block px-4 py-2.5 text-sm text-charcoal hover:text-rust hover:bg-cream/60 transition-colors">Estate Sales</a>
+                <a href="/services#downsizing" class="block px-4 py-2.5 text-sm text-charcoal hover:text-rust hover:bg-cream/60 transition-colors">Downsizing</a>
+              </div>
+            </div>
+          </div>
+          <a href="/contact" class="nav-link text-sm font-medium text-rust">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-6">
+          <div class="text-right">
+            <a href="tel:4352336029" class="block text-sm font-semibold text-charcoal hover:text-rust transition-colors">435-233-6029</a>
+            <a href="mailto:contact@redrock435.com" class="block text-xs text-taupe hover:text-rust transition-colors mt-0.5">contact@redrock435.com</a>
+          </div>
+          <a href="/contact" class="btn-primary bg-rust text-white px-5 py-2.5 rounded-lg text-sm font-semibold">Get a Quote</a>
+        </div>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-cream transition-colors" aria-label="Open menu">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-cream px-4 py-6">
+      <nav class="flex flex-col gap-1">
+        <a href="/" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">Home</a>
+        <a href="/about" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">About Us</a>
+        <a href="/services" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">Services</a>
+        <a href="/services#estate-sales" class="px-3 py-2.5 text-sm text-taupe rounded-lg hover:bg-cream hover:text-rust transition-colors pl-6">Estate Sales</a>
+        <a href="/services#downsizing" class="px-3 py-2.5 text-sm text-taupe rounded-lg hover:bg-cream hover:text-rust transition-colors pl-6">Downsizing</a>
+        <a href="/contact" class="px-3 py-2.5 text-sm font-medium text-rust rounded-lg bg-cream/50">Contact</a>
+      </nav>
+      <div class="mt-6 flex flex-col gap-3">
+        <a href="tel:4352336029" class="text-sm font-semibold text-rust text-center">435-233-6029</a>
+        <a href="/contact" class="btn-primary bg-rust text-white py-3 rounded-lg text-sm font-semibold text-center">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- PAGE HERO -->
+  <section class="bg-cream py-16 sm:py-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <p class="text-sm font-semibold text-rust uppercase tracking-[0.15em] mb-3">Free Consultation</p>
+      <h1 class="text-5xl sm:text-6xl font-bold text-charcoal mb-4" style="letter-spacing: -0.025em;">Get In Touch</h1>
+      <p class="text-xl text-taupe max-w-xl leading-relaxed">
+        Need help with an estate sale or cleanout? Contact us today and we'll figure out the right approach for your situation.
+      </p>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid md:grid-cols-2 gap-16">
+
+        <!-- FORM -->
+        <div>
+          <h2 class="text-3xl font-bold text-charcoal mb-2" style="letter-spacing: -0.02em;">Let us do the heavy lifting</h2>
+          <p class="text-taupe mb-8">Fill out the form below and we'll get back to you as soon as possible.</p>
+
+          <!-- NOTE: Replace YOUR_FORM_ID with your Formspree endpoint at formspree.io -->
+          <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" id="contactForm" class="space-y-5">
+            <div>
+              <label for="name" class="block text-sm font-medium text-charcoal mb-1.5">Name</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                required
+                placeholder="Your full name"
+                class="w-full px-4 py-3 rounded-lg border border-cream bg-white text-charcoal text-sm placeholder-taupe/60"
+              >
+            </div>
+            <div>
+              <label for="phone" class="block text-sm font-medium text-charcoal mb-1.5">Phone</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                placeholder="(435) 000-0000"
+                class="w-full px-4 py-3 rounded-lg border border-cream bg-white text-charcoal text-sm placeholder-taupe/60"
+              >
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-charcoal mb-1.5">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
+                required
+                placeholder="your@email.com"
+                class="w-full px-4 py-3 rounded-lg border border-cream bg-white text-charcoal text-sm placeholder-taupe/60"
+              >
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-charcoal mb-3">How can we help?</label>
+              <div class="space-y-3">
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="services" value="Estate Sale Services" class="w-4 h-4 rounded border-cream text-rust accent-rust">
+                  <span class="text-sm text-charcoal group-hover:text-rust transition-colors">Estate Sale Services</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="services" value="Real Estate Services" class="w-4 h-4 rounded border-cream text-rust accent-rust">
+                  <span class="text-sm text-charcoal group-hover:text-rust transition-colors">Real Estate Services</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="services" value="Estate Cleanout" class="w-4 h-4 rounded border-cream text-rust accent-rust">
+                  <span class="text-sm text-charcoal group-hover:text-rust transition-colors">Estate Cleanout</span>
+                </label>
+                <label class="flex items-center gap-3 cursor-pointer group">
+                  <input type="checkbox" name="services" value="Junk Removal" class="w-4 h-4 rounded border-cream text-rust accent-rust">
+                  <span class="text-sm text-charcoal group-hover:text-rust transition-colors">Junk Removal</span>
+                </label>
+              </div>
+            </div>
+            <div>
+              <label for="message" class="block text-sm font-medium text-charcoal mb-1.5">Anything else? <span class="text-taupe font-normal">(optional)</span></label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                placeholder="Tell us a bit about your situation..."
+                class="w-full px-4 py-3 rounded-lg border border-cream bg-white text-charcoal text-sm placeholder-taupe/60 resize-none"
+              ></textarea>
+            </div>
+            <button
+              type="submit"
+              class="btn-primary w-full bg-rust text-white py-4 rounded-lg text-sm font-semibold"
+              style="box-shadow: 0 4px 20px rgba(181,74,45,0.25);"
+            >
+              Send Message
+            </button>
+          </form>
+
+          <!-- Success / Error messages -->
+          <div id="formSuccess" class="hidden mt-6 bg-green-50 border border-green-200 rounded-lg p-5">
+            <p class="text-green-800 text-sm font-medium">Thank you for contacting us. We will get back to you as soon as possible.</p>
+          </div>
+          <div id="formError" class="hidden mt-6 bg-red-50 border border-red-200 rounded-lg p-5">
+            <p class="text-red-800 text-sm font-medium">Oops, there was an error sending your message. Please try again later.</p>
+          </div>
+        </div>
+
+        <!-- CONTACT INFO -->
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-3xl font-bold text-charcoal mb-6" style="letter-spacing: -0.02em;">Or reach us directly</h2>
+            <div class="space-y-5">
+              <a href="tel:4352336029" class="flex items-start gap-4 group">
+                <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-rust/20 transition-colors">
+                  <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-taupe uppercase tracking-widest mb-1">Phone</p>
+                  <p class="text-charcoal font-semibold group-hover:text-rust transition-colors">435-233-6029</p>
+                </div>
+              </a>
+              <a href="mailto:contact@redrock435.com" class="flex items-start gap-4 group">
+                <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5 group-hover:bg-rust/20 transition-colors">
+                  <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-taupe uppercase tracking-widest mb-1">Email</p>
+                  <p class="text-charcoal font-semibold group-hover:text-rust transition-colors">contact@redrock435.com</p>
+                </div>
+              </a>
+              <div class="flex items-start gap-4">
+                <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center shrink-0 mt-0.5">
+                  <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs font-semibold text-taupe uppercase tracking-widest mb-1">Service Area</p>
+                  <p class="text-charcoal font-medium leading-relaxed">Cedar City, St. George, Beaver, Enoch,<br>Hurricane, Washington, and all of Southern Utah</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Divider -->
+          <div class="border-t border-cream"></div>
+
+          <!-- Why contact us blurb -->
+          <div class="bg-cream rounded-2xl p-7">
+            <h3 class="text-xl font-bold text-charcoal mb-3">Free Consultation</h3>
+            <p class="text-taupe text-sm leading-relaxed mb-5">
+              Not sure what service you need? Give us a call or send a message. We'll help you figure out the right approach and give you an honest quote at no cost.
+            </p>
+            <ul class="space-y-2.5">
+              <li class="flex items-center gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-rust/15 flex items-center justify-center shrink-0">
+                  <svg class="w-2.5 h-2.5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-sm text-charcoal">No obligation quote</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-rust/15 flex items-center justify-center shrink-0">
+                  <svg class="w-2.5 h-2.5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-sm text-charcoal">Fast response, usually same day</span>
+              </li>
+              <li class="flex items-center gap-2.5">
+                <span class="w-4 h-4 rounded-full bg-rust/15 flex items-center justify-center shrink-0">
+                  <svg class="w-2.5 h-2.5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg>
+                </span>
+                <span class="text-sm text-charcoal">Serving all of Southern Utah</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal text-white py-14 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <img src="images/logo.png" alt="Red Rock Estate Services" class="h-12 mb-4 brightness-0 invert opacity-80">
+          <p class="text-white/50 text-sm leading-relaxed">Your one-stop solution for estate liquidation in Southern Utah.</p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Quick Links</h4>
+          <nav class="flex flex-col gap-2">
+            <a href="/" class="text-sm text-white/60 hover:text-white transition-colors">Home</a>
+            <a href="/about" class="text-sm text-white/60 hover:text-white transition-colors">About Us</a>
+            <a href="/services" class="text-sm text-white/60 hover:text-white transition-colors">Services</a>
+            <a href="/contact" class="text-sm text-white/60 hover:text-white transition-colors">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Contact</h4>
+          <div class="flex flex-col gap-2">
+            <a href="tel:4352336029" class="text-sm text-white/60 hover:text-white transition-colors">435-233-6029</a>
+            <a href="mailto:contact@redrock435.com" class="text-sm text-white/60 hover:text-white transition-colors">contact@redrock435.com</a>
+            <p class="text-sm text-white/50 mt-1">St. George, Cedar City, Hurricane,<br>Enoch, and all of Southern Utah</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center">
+        <p class="text-white/30 text-xs">&copy; 2025 Red Rock Estate Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('menuBtn').addEventListener('click', function() {
+      document.getElementById('mobileMenu').classList.toggle('hidden');
+    });
+
+    // Formspree AJAX submission
+    var form = document.getElementById('contactForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
+          if (res.ok) {
+            form.reset();
+            document.getElementById('formSuccess').classList.remove('hidden');
+          } else {
+            document.getElementById('formError').classList.remove('hidden');
+          }
+        }).catch(function() {
+          document.getElementById('formError').classList.remove('hidden');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

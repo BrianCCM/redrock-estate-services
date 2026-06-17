@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Red Rock Estate Services | Estate Sales &amp; Cleanouts in Southern Utah</title>
+  <meta name="description" content="Red Rock Estate Services offers professional estate sales, estate cleanouts, junk removal, and real estate services across Southern Utah. Call 435-233-6029 for a free consultation.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rust: '#B54A2D',
+            'rust-dark': '#8E3A21',
+            cream: '#E8DCCA',
+            charcoal: '#2F2F2F',
+            taupe: '#8A7F73',
+            'taupe-dark': '#6B6159',
+            sage: '#8FAEA3',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    body { font-family: 'Inter', system-ui, sans-serif; color: #2F2F2F; }
+    h1, h2, h3, h4 { font-family: 'Playfair Display', Georgia, serif; }
+    .nav-link { transition: color 0.2s ease; }
+    .nav-link:hover { color: #B54A2D; }
+    .btn-primary { transition: background-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease; }
+    .btn-primary:hover { background-color: #8E3A21; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(181,74,45,0.3); }
+    .btn-primary:active { transform: translateY(0); }
+    .card { transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease; }
+    .card:hover { border-color: #B54A2D; box-shadow: 0 8px 32px rgba(181,74,45,0.12); transform: translateY(-2px); }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- HEADER -->
+  <header class="bg-white sticky top-0 z-50" style="box-shadow: 0 1px 0 rgba(0,0,0,0.08), 0 4px 16px rgba(0,0,0,0.04);">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        <a href="/" class="shrink-0">
+          <img src="images/logo.png" alt="Red Rock Estate Services" class="h-14 w-auto">
+        </a>
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="/" class="nav-link text-sm font-medium text-charcoal">Home</a>
+          <a href="/about" class="nav-link text-sm font-medium text-charcoal">About Us</a>
+          <div class="relative group">
+            <button class="nav-link text-sm font-medium text-charcoal flex items-center gap-1 focus-visible:outline-rust rounded">
+              Services
+              <svg class="w-3.5 h-3.5 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 9l-7 7-7-7"/></svg>
+            </button>
+            <div class="absolute top-full left-0 pt-3 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-150">
+              <div class="bg-white rounded-xl py-2 w-52 border border-cream" style="box-shadow: 0 12px 40px rgba(0,0,0,0.12);">
+                <a href="/services#estate-sales" class="block px-4 py-2.5 text-sm text-charcoal hover:text-rust hover:bg-cream/60 transition-colors">Estate Sales</a>
+                <a href="/services#downsizing" class="block px-4 py-2.5 text-sm text-charcoal hover:text-rust hover:bg-cream/60 transition-colors">Downsizing</a>
+              </div>
+            </div>
+          </div>
+          <a href="/contact" class="nav-link text-sm font-medium text-charcoal">Contact</a>
+        </nav>
+        <div class="hidden md:flex items-center gap-6">
+          <div class="text-right">
+            <a href="tel:4352336029" class="block text-sm font-semibold text-charcoal hover:text-rust transition-colors">435-233-6029</a>
+            <a href="mailto:contact@redrock435.com" class="block text-xs text-taupe hover:text-rust transition-colors mt-0.5">contact@redrock435.com</a>
+          </div>
+          <a href="/contact" class="btn-primary bg-rust text-white px-5 py-2.5 rounded-lg text-sm font-semibold focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-rust">
+            Get a Quote
+          </a>
+        </div>
+        <button id="menuBtn" class="md:hidden p-2 rounded-lg hover:bg-cream transition-colors" aria-label="Open menu" aria-expanded="false">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden border-t border-cream px-4 py-6">
+      <nav class="flex flex-col gap-1">
+        <a href="/" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">Home</a>
+        <a href="/about" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">About Us</a>
+        <a href="/services" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">Services</a>
+        <a href="/services#estate-sales" class="px-3 py-2.5 text-sm text-taupe rounded-lg hover:bg-cream hover:text-rust transition-colors pl-6">Estate Sales</a>
+        <a href="/services#downsizing" class="px-3 py-2.5 text-sm text-taupe rounded-lg hover:bg-cream hover:text-rust transition-colors pl-6">Downsizing</a>
+        <a href="/contact" class="px-3 py-2.5 text-sm font-medium text-charcoal rounded-lg hover:bg-cream hover:text-rust transition-colors">Contact</a>
+      </nav>
+      <div class="mt-6 flex flex-col gap-3">
+        <a href="tel:4352336029" class="text-sm font-semibold text-rust text-center">435-233-6029</a>
+        <a href="/contact" class="btn-primary bg-rust text-white py-3 rounded-lg text-sm font-semibold text-center">Get a Quote</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="bg-cream px-4 sm:px-6 lg:px-8 py-24 sm:py-32">
+    <div class="max-w-7xl mx-auto">
+      <div class="max-w-3xl">
+        <p class="text-sm font-semibold text-rust uppercase tracking-[0.15em] mb-5">Southern Utah Estate Services</p>
+        <h1 class="text-5xl sm:text-6xl font-bold text-charcoal mb-6 leading-tight" style="letter-spacing: -0.025em;">
+          Your one-stop solution<br>for Estate Liquidation
+        </h1>
+        <p class="text-xl text-taupe leading-relaxed mb-10" style="max-width: 520px;">
+          From estate sales to clean outs, we handle the details so you don't have to.
+        </p>
+        <a href="/contact" class="btn-primary inline-block bg-rust text-white px-8 py-4 rounded-lg text-base font-semibold" style="box-shadow: 0 4px 20px rgba(181,74,45,0.25);">
+          Schedule a Free Consultation
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICE CARDS -->
+  <section class="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="/services#estate-sales" class="card group p-6 rounded-xl border border-cream text-center block">
+          <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:bg-rust/10">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-charcoal text-sm transition-colors group-hover:text-rust">Estate Sales</h3>
+        </a>
+        <a href="/services#cleanout" class="card group p-6 rounded-xl border border-cream text-center block">
+          <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:bg-rust/10">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-charcoal text-sm transition-colors group-hover:text-rust">Estate Cleanout</h3>
+        </a>
+        <a href="/services#real-estate" class="card group p-6 rounded-xl border border-cream text-center block">
+          <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:bg-rust/10">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-charcoal text-sm transition-colors group-hover:text-rust">Real Estate Services</h3>
+        </a>
+        <a href="/services#downsizing" class="card group p-6 rounded-xl border border-cream text-center block">
+          <div class="w-12 h-12 bg-cream rounded-full flex items-center justify-center mx-auto mb-4 transition-colors group-hover:bg-rust/10">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"/>
+            </svg>
+          </div>
+          <h3 class="font-semibold text-charcoal text-sm transition-colors group-hover:text-rust">Junk Removal</h3>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES DETAIL -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-cream">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-12">
+        <h2 class="text-4xl font-bold text-charcoal" style="letter-spacing: -0.02em;">What we do</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-white p-8 rounded-xl" style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+          <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M7 7h.01M7 3h5c.512 0 1.024.195 1.414.586l7 7a2 2 0 010 2.828l-7 7a2 2 0 01-2.828 0l-7-7A1.994 1.994 0 013 12V7a4 4 0 014-4z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-charcoal mb-3">Estate Sales &amp; Liquidation</h3>
+          <p class="text-taupe leading-relaxed">Respectful and efficient in-home sales for handling personal belongings. You keep what you want, we handle the rest.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl" style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+          <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-charcoal mb-3">Cash for Valuables</h3>
+          <p class="text-taupe leading-relaxed">Immediate cash offers for select high-value items including jewelry, watches, instruments, and collectibles.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl" style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+          <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-charcoal mb-3">Estate Cleanouts</h3>
+          <p class="text-taupe leading-relaxed">Full property cleanouts after the sale, including removal, donation coordination, and proper disposal.</p>
+        </div>
+        <div class="bg-white p-8 rounded-xl" style="box-shadow: 0 2px 12px rgba(0,0,0,0.06);">
+          <div class="w-10 h-10 bg-rust/10 rounded-lg flex items-center justify-center mb-5">
+            <svg class="w-5 h-5 text-rust" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-charcoal mb-3">Real Estate Services</h3>
+          <p class="text-taupe leading-relaxed">Licensed Utah realtor assistance for listing and selling your home once the estate is cleared and ready.</p>
+        </div>
+      </div>
+      <div class="mt-10 text-center">
+        <a href="/services" class="inline-block border-2 border-rust text-rust px-6 py-3 rounded-lg text-sm font-semibold hover:bg-rust hover:text-white transition-colors">View All Services</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOCIAL PROOF + BEFORE/AFTER -->
+  <section class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-14">
+        <p class="text-sm font-semibold text-rust uppercase tracking-[0.15em] mb-3">Our Track Record</p>
+        <h2 class="text-4xl font-bold text-charcoal" style="letter-spacing: -0.02em;">
+          We've been in the<br>transformation business for over 10 years
+        </h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(0,0,0,0.1);">
+          <div class="relative overflow-hidden">
+            <img src="images/before.png" alt="Before estate cleanout" class="w-full h-72 object-cover">
+          </div>
+          <div class="bg-charcoal text-white text-center py-3">
+            <span class="text-xs font-bold uppercase tracking-[0.2em]">Before</span>
+          </div>
+        </div>
+        <div class="rounded-xl overflow-hidden" style="box-shadow: 0 4px 24px rgba(0,0,0,0.1);">
+          <div class="relative overflow-hidden">
+            <img src="images/after.png" alt="After estate cleanout" class="w-full h-72 object-cover">
+          </div>
+          <div class="bg-rust text-white text-center py-3">
+            <span class="text-xs font-bold uppercase tracking-[0.2em]">After</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="bg-rust py-20 px-4 sm:px-6 lg:px-8" style="background: linear-gradient(135deg, #B54A2D 0%, #8E3A21 100%);">
+    <div class="max-w-7xl mx-auto text-center">
+      <h2 class="text-4xl font-bold text-white mb-4" style="letter-spacing: -0.02em;">Too much stuff? Let us help.</h2>
+      <p class="text-white/80 mb-10 text-lg">Serving St. George, Cedar City, Hurricane, Enoch, and all of Southern Utah</p>
+      <a href="/contact" class="inline-block bg-white text-rust px-8 py-4 rounded-lg text-base font-semibold hover:bg-cream transition-colors" style="box-shadow: 0 4px 20px rgba(0,0,0,0.2);">
+        Get Started
+      </a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal text-white py-14 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <img src="images/logo.png" alt="Red Rock Estate Services" class="h-12 mb-4 brightness-0 invert opacity-80">
+          <p class="text-white/50 text-sm leading-relaxed">Your one-stop solution for estate liquidation in Southern Utah.</p>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Quick Links</h4>
+          <nav class="flex flex-col gap-2">
+            <a href="/" class="text-sm text-white/60 hover:text-white transition-colors">Home</a>
+            <a href="/about" class="text-sm text-white/60 hover:text-white transition-colors">About Us</a>
+            <a href="/services" class="text-sm text-white/60 hover:text-white transition-colors">Services</a>
+            <a href="/contact" class="text-sm text-white/60 hover:text-white transition-colors">Contact</a>
+          </nav>
+        </div>
+        <div>
+          <h4 class="text-xs font-semibold text-white/50 uppercase tracking-[0.15em] mb-4">Contact</h4>
+          <div class="flex flex-col gap-2">
+            <a href="tel:4352336029" class="text-sm text-white/60 hover:text-white transition-colors">435-233-6029</a>
+            <a href="mailto:contact@redrock435.com" class="text-sm text-white/60 hover:text-white transition-colors">contact@redrock435.com</a>
+            <p class="text-sm text-white/50 mt-1">St. George, Cedar City, Hurricane,<br>Enoch, and all of Southern Utah</p>
+          </div>
+        </div>
+      </div>
+      <div class="border-t border-white/10 pt-8 text-center">
+        <p class="text-white/30 text-xs">&copy; 2025 Red Rock Estate Services. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    var menuBtn = document.getElementById('menuBtn');
+    var mobileMenu = document.getElementById('mobileMenu');
+    menuBtn.addEventListener('click', function() {
+      var open = mobileMenu.classList.toggle('hidden');
+      menuBtn.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+  </script>
+</body>
+</html>
